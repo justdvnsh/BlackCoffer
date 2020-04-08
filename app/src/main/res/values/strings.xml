@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BlackCoffer</string>
+<!--    welcome screen-->
+    <string name="welcome">Welcome</string>
+    <string name="welcome_info">Please Login or Signup to continue using Helloji</string>
+    <string name="methods">Enter via Social Networks </string>
+    <string name="different_method">Or login with email</string>
+    <string name="signup_btn_text">Signup</string>
+    <string name="login_text">Login</string>
+    <string name="already_have_an_account">Already Have an account ?</string>
+</resources>

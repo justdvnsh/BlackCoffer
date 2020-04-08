@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "515041886594",
+    "firebase_url": "https://blackcoffer-df540.firebaseio.com",
+    "project_id": "blackcoffer-df540",
+    "storage_bucket": "blackcoffer-df540.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515041886594:android:a21f9e9e0b1a559155cf9b",
+        "android_client_info": {
+          "package_name": "com.divyansh.blackcoffer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "515041886594-ulitpmdd9kkmblvg8f2dqibr9o8j20b9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNJAhd-7UiUjNlgRX5jmPdM-4SyhYUyQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "515041886594-ulitpmdd9kkmblvg8f2dqibr9o8j20b9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
