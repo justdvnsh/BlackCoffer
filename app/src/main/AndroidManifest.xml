@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VerificationActivity"
+        <activity android:name=".ui.VerificationActivity"
             android:theme="@style/WelcomeTheme"></activity>
-        <activity android:name=".PhoneNumberActivity"
+        <activity android:name=".ui.PhoneNumberActivity"
             android:theme="@style/WelcomeTheme"/>
-        <activity android:name=".LoginActivity"
+        <activity android:name=".ui.LoginActivity"
             android:theme="@style/WelcomeTheme"/>
-        <activity android:name=".SignupActivity"
+        <activity android:name=".ui.SignupActivity"
             android:theme="@style/WelcomeTheme"/>
-        <activity android:name=".WelcomeUserActivity"
+        <activity android:name=".ui.WelcomeUserActivity"
             android:theme="@style/WelcomeTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
         </activity>
     </application>
 

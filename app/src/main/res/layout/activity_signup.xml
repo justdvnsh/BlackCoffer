@@ -9,7 +9,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".SignupActivity">
+        tools:context=".ui.SignupActivity">
 
         <TextView
             android:id="@+id/signup_text"
@@ -111,7 +111,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/email_signup"
-            android:textColor="@android:color/white"
             android:padding="25dp"
             android:background="@drawable/rounded_button_white"
             android:hint="Email"
@@ -128,7 +127,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/password_signup"
-            android:textColor="@android:color/white"
+            android:inputType="textPassword"
             android:padding="25dp"
             android:background="@drawable/rounded_button_white"
             android:hint="Password"

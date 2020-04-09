@@ -1,4 +1,4 @@
-package com.divyansh.blackcoffer;
+package com.divyansh.blackcoffer.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.squareup.picasso.Picasso;
+import com.divyansh.blackcoffer.R;
+import com.divyansh.blackcoffer.ui.LoginActivity;
+import com.divyansh.blackcoffer.ui.SignupActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

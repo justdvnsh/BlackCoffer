@@ -1,9 +1,11 @@
-package com.divyansh.blackcoffer;
+package com.divyansh.blackcoffer.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.divyansh.blackcoffer.R;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

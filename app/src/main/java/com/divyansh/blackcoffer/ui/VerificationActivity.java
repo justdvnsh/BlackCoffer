@@ -1,8 +1,10 @@
-package com.divyansh.blackcoffer;
+package com.divyansh.blackcoffer.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.divyansh.blackcoffer.R;
 
 public class VerificationActivity extends AppCompatActivity {
 
