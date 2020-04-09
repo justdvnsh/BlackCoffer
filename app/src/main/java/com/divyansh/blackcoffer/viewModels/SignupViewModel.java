@@ -13,10 +13,14 @@ import androidx.lifecycle.AndroidViewModel;
 import com.divyansh.blackcoffer.repo.FirebaseEmailAndPassword;
 import com.divyansh.blackcoffer.ui.MainActivity;
 import com.divyansh.blackcoffer.ui.PhoneNumberActivity;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.GoogleAuthProvider;
 
 public class SignupViewModel extends AndroidViewModel {
 
@@ -53,6 +57,19 @@ public class SignupViewModel extends AndroidViewModel {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isComplete()) {
                             getApplication().startActivity(new Intent(getApplication().getApplicationContext(), MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                        }
+                    }
+                });
+    }
+
+    public void signinWithGoogle(GoogleSignInAccount account) {
+        AuthCredential creds = GoogleAuthProvider.getCredential(account.getIdToken(), null);
+        firebaseAuth.signInWithCredential(creds)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            getApplication().startActivity(new Intent(getApplication(), PhoneNumberActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                         }
                     }
                 });

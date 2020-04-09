@@ -54,7 +54,7 @@
         <ImageButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/google_signin"
+            android:id="@+id/google_signin_signup_activity"
             android:src="@drawable/ic_brands_and_logotypes"
             android:textColor="@android:color/white"
             android:padding="20dp"
@@ -99,7 +99,7 @@
             android:text="@string/different_method"
             android:textSize="12sp"
             android:layout_margin="45dp"
-            app:layout_constraintTop_toBottomOf="@id/google_signin"
+            app:layout_constraintTop_toBottomOf="@id/google_signin_signup_activity"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
