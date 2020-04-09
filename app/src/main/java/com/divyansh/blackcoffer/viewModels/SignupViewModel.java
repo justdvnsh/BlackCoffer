@@ -10,7 +10,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 
-import com.divyansh.blackcoffer.repo.FirebaseEmailAndPassword;
 import com.divyansh.blackcoffer.ui.MainActivity;
 import com.divyansh.blackcoffer.ui.PhoneNumberActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;

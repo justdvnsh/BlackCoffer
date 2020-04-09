@@ -38,34 +38,46 @@ public class PhoneNumberActivity extends AppCompatActivity {
         phoneAuthProvider = PhoneAuthProvider.getInstance();
     }
 
+    private boolean validateFields() {
+        if (mobileNumber.getText().length() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     @OnClick(R.id.mobile_number_submit_btn)
     public void startVerification() {
-        phoneAuthProvider.verifyPhoneNumber(
-                mobileNumber.getText().toString(),
-                60,
-                TimeUnit.SECONDS,
-                this,
-                new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                    @Override
-                    public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-                        Log.i("Credetial", phoneAuthCredential.toString());
-                    }
+        if (validateFields()) {
+            phoneAuthProvider.verifyPhoneNumber(
+                    "+91 " + mobileNumber.getText().toString(),
+                    60,
+                    TimeUnit.SECONDS,
+                    this,
+                    new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                        @Override
+                        public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+                            Log.i("Credetial", phoneAuthCredential.toString());
+                        }
 
-                    @Override
-                    public void onVerificationFailed(@NonNull FirebaseException e) {
-                        Log.i("error->", e.getMessage());
-                        Toast.makeText(getApplication(), "Failed", Toast.LENGTH_SHORT).show();
-                    }
+                        @Override
+                        public void onVerificationFailed(@NonNull FirebaseException e) {
+                            Log.i("error->", e.getMessage());
+                            Toast.makeText(getApplication(), "Failed", Toast.LENGTH_SHORT).show();
+                        }
 
-                    @Override
-                    public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                        super.onCodeSent(s, forceResendingToken);
-                        Toast.makeText(getApplicationContext(), "Code Sent", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), VerificationActivity.class);
-                        intent.putExtra("verificationId", s);
-                        startActivity(intent);
+                        @Override
+                        public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                            super.onCodeSent(s, forceResendingToken);
+                            Toast.makeText(getApplicationContext(), "Code Sent", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(), VerificationActivity.class);
+                            intent.putExtra("verificationId", s);
+                            startActivity(intent);
+                        }
                     }
-                }
-        );
+            );
+        } else {
+            Toast.makeText(getApplicationContext(), "Please Enter your Number !", Toast.LENGTH_SHORT).show();
+        }
     }
 }
