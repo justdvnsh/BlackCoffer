@@ -1,6 +1,7 @@
 package com.divyansh.blackcoffer.viewModels;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
 import android.provider.ContactsContract;
 import android.util.Log;
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 
 import com.divyansh.blackcoffer.repo.FirebaseEmailAndPassword;
+import com.divyansh.blackcoffer.ui.MainActivity;
 import com.divyansh.blackcoffer.ui.PhoneNumberActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -39,6 +41,18 @@ public class SignupViewModel extends AndroidViewModel {
                             getApplication().startActivity(new Intent(getApplication().getApplicationContext(), PhoneNumberActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                         } else {
                             Log.i("Error->", task.toString());
+                        }
+                    }
+                });
+    }
+
+    public void login(String email, String password) {
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isComplete()) {
+                            getApplication().startActivity(new Intent(getApplication().getApplicationContext(), MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                         }
                     }
                 });
