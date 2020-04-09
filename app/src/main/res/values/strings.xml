@@ -12,4 +12,11 @@
     <string name="login">Login Now</string>
     <string name="already_have_an_account">Already Have an account ?</string>
     <string name="dont_have_an_account">Dont Have an account ?</string>
+    <string name="security_check">Just a quick security check</string>
+    <string name="enter_your_mobile_number">Enter your mobile number</string>
+    <string name="enter_verification_code">Enter Verification Code</string>
+    <string name="security_check_info">Please enter your mobile number.\nThis is to verify your phone</string>
+    <string name="security_check_verification_code">Please enter the verification code we just sent you.\nIt might take a few minutes to receive your code.</string>
+    <string name="didnt_receive_code">Didn\'t Receive the code ?</string>
+    <string name="send_again_link">Send Again</string>
 </resources>

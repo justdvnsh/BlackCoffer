@@ -1,9 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".VerificationActivity">
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".VerificationActivity">
+
+        <TextView
+            android:id="@+id/mobile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/security_check"
+            android:textColor="@color/colorBlack"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_margin="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/security_check_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/security_check_verification_code"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mobile_number" />
+
+        <TextView
+            android:id="@+id/enter_verification_code_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/enter_verification_code"
+            app:layout_constraintTop_toBottomOf="@id/security_check_info"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="12sp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mobile_number_edit_text"
+            android:textColor="@android:color/white"
+            android:padding="25dp"
+            android:background="@drawable/rounded_button_white"
+            android:hint="6654"
+            app:layout_constraintTop_toBottomOf="@id/enter_verification_code_text"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:id="@+id/didnt_receive_code"
+            android:text="@string/didnt_receive_code"
+            android:textSize="14sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toBottomOf="@id/mobile_number_edit_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/send_again_text"
+            android:text="@string/send_again_link"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toTopOf="@id/didnt_receive_code"
+            app:layout_constraintStart_toEndOf="@id/didnt_receive_code"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/verification_code_submit_btn"
+            android:textColor="@android:color/white"
+            android:padding="20dp"
+            android:background="@drawable/rounded_button"
+            android:text="Verify Code"
+            app:layout_constraintTop_toBottomOf="@id/didnt_receive_code"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

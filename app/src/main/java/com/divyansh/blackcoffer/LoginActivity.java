@@ -18,6 +18,11 @@ public class LoginActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
+    @OnClick(R.id.login_btn_loginActivity)
+    public void startLogin(){
+        startActivity(new Intent(getApplicationContext(), PhoneNumberActivity.class));
+    }
+
     @OnClick(R.id.signup_text_login)
     public void startSignup() {
         startActivity(new Intent(getApplicationContext(), SignupActivity.class));
