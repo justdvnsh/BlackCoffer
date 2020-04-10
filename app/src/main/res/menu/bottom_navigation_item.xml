@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_dashboard"
+        android:id="@+id/tags"
         android:title="#tags"
         android:icon="@drawable/ic_notifications_none_black_24dp"/>
     <item
-        android:id="@+id/create_events"
+        android:id="@+id/trending"
         android:title="Trending"
         android:icon="@drawable/ic_notifications_none_black_24dp"/>
     <item

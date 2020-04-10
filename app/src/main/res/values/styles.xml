@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimaryGrey</item>
         <item name="colorPrimaryDark">@color/colorPrimaryGrey</item>
         <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimaryGreyDark</item>
     </style>
 
     <style name="WelcomeTheme" parent="Theme.AppCompat.Light.NoActionBar">
