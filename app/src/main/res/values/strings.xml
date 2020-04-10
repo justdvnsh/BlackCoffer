@@ -2,6 +2,8 @@
     <string name="app_name">BlackCoffer</string>
 
     <string name="welcome">Welcome</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="welcome_info">Please Login or Signup to continue using Helloji</string>
     <string name="signup_info">Please Signup to continue using Helloji</string>
     <string name="login_info">Please Login to continue using Helloji</string>
